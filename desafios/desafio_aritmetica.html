@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contando</title>
+</head>
+<body>
+    
+    <script>
+
+        function calculo() {
+            let n1 = prompt('Digite o primeiro número:')
+            let n2 = prompt('Digite o segundo número:')
+            let operacao = prompt('Qual a operação desejada (soma/subtração):')
+            console.log(operacao)
+            operacao = operacao.toLowerCase()
+
+            if (n1 !== '' && n2 !== '' && operacao !== '') {
+                let numero1 = Number(n1)
+                let numero2 = Number(n2)
+                let resultado
+
+                if (operacao === 'soma') {
+                    resultado = numero1 + numero2
+                } else {
+                    resultado = numero1 - numero2
+                }
+
+                return resultado;
+            } else {
+                alert('Valores inválidos!')
+            }
+        }
+
+        document.write(calculo())
+
+    </script>
+</body>
+</html>
