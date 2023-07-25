@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos - Mouse</title>
+    <style>
+        div#eventos{
+            border: 2px solid #000; width: 150px; height: 150px;
+        }
+
+        div#teste{
+            border: 2px solid goldenrod; width: 150px; height: 150px; margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div id="eventos"></div>
+    <div id="teste"></div>
+
+    <script>
+        let eventos = document.getElementById('eventos')
+        //Evento com CLICK(click)
+        eventos.addEventListener('click', ()=> {
+            eventos.style.backgroundColor = 'red'
+            eventos.textContent = 'Evento de clique'
+            eventos.style.color = '#fff'
+        })
+
+        //Evento com CLIQUE DUPLO(dblclick)
+        eventos.addEventListener('dblclick', ()=>{
+            eventos.style.backgroundColor = 'blue'
+            eventos.textContent = 'Evento de clique duplo'
+        })
+
+        //Evento quando o CLIQUE SOBRE O ELEMENTO É LIBERADO(mouseup)
+        document.getElementById('teste').addEventListener('mouseup', ()=>{
+            document.getElementById('teste').style.backgroundColor = 'purple'
+            document.getElementById('teste').textContent = 'Evento de levantar do clique do mouse'
+            document.getElementById('teste').style.color = '#fff'
+        })
+
+        //Evento quando o MOUSE SOBREPOE O ELEMENTO(mouseover)
+        eventos.addEventListener('mouseover', ()=>{
+            eventos.style.backgroundColor = 'green'
+            eventos.textContent = 'Evento de entrada do mouse'
+            eventos.style.color = '#FFF'
+        })
+
+        //Evento quando o MOUSE SAI O ELEMENTO(mouseover)
+        eventos.addEventListener('mouseout', ()=>{
+            eventos.style.backgroundColor = 'yellow'
+            eventos.textContent = 'Evento de saída do mouse'
+            eventos.style.color = '#000'
+        })
+    </script>
+</body>
+</html>
