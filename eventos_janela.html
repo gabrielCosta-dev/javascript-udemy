@@ -5,17 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Eventos - Janela</title>
     <style>
-        div#eventos{
-            border: 2px solid #000; width: 150px; height: 150px;
+        div{
+            border: 2px solid #000; width: 150px; height: 3000px;
         }
     </style>
 </head>
-<body>
-    <input type="text" name="" id="eventos">
+<body id="eventos">
+    <div></div>
 
     <script>
         let eventos = document.getElementById('eventos')
-        
+        console.log(eventos)
+        //Evento de QUANDO A JANELA TEM SEU TAMANHO ALTERADO(resize)
+        window.addEventListener('resize', ()=>{
+            eventos.style.backgroundColor = '#000'
+        })
+
+        //Evento de QUANDO O SCROLL DO MOUSE É USADO(scroll)
+        window.addEventListener('scroll', ()=>{
+            eventos.style.backgroundColor = '#f5f804'
+        })
     </script>
 </body>
 </html>
