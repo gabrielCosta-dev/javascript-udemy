@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos - Input</title>
+    <style>
+        div#eventos{
+            border: 2px solid #000; width: 150px; height: 150px;
+        }
+    </style>
+</head>
+<body>
+    <input type="text" name="" id="eventos">
+    
+    <select name="" id="eventos2">
+        <option value="sim">Sim</option>
+        <option value="nao">Não</option>
+    </select>
+
+    <script>
+        let eventos = document.getElementById('eventos')
+        
+        //Acionado quando O ELEMENTO RECEBE O FOCO DO CURSOR DO MOUSE(focus)
+        eventos.addEventListener('focus', ()=>{
+            eventos.style.width = '250px'
+        })
+
+        //Acionado quando o ELEMENTO PERDE O FOCO(blur)
+        eventos.addEventListener('blur', ()=>{
+            eventos.style.height = '50px'
+        })
+        
+        //Acionado quando o ESTADO DO ELEMENTO É MODIFICADO(change)
+        eventos2.addEventListener('change', ()=>{
+            eventos2.style.background = '#0f0'
+        })
+    </script>
+</body>
+</html>
