@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM - Manipulando valores</title>
+</head>
+<body>
+    <input type="text" id="insercao" maxlength="1">
+
+    <label for="letras">Letras:</label>
+    <input type="text" id="letras" disabled>
+
+    <label for="numeros">Números:</label>
+    <input type="number" id="numeros" disabled>
+
+   <!--  <button type="button" id="manipular">Manipular</button> -->
+
+    <script>
+        document.getElementById('insercao').placeholder = 'Digite uma letra ou número.'
+
+        document.getElementById('insercao').addEventListener('keyup', ()=>{
+            let insercao = document.getElementById('insercao').value
+            let letra = document.getElementById('letras')
+            let numero = document.getElementById('numeros')
+            console.log(insercao)
+            
+            if (insercao !== '') {
+                
+                if (isNaN(insercao)) {
+                    //Letras
+                    letra.placeholder += insercao
+                } else {
+                    //Números
+                    numero.placeholder += insercao
+                }
+            } else {
+                alert('Digite um caractere!')
+            }
+        })
+    </script>
+</body>
+</html>
