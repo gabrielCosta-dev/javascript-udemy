@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM - Manipulando estilos</title>
+</head>
+<body>
+    <button type="button" id="vermelho">Vermelho</button>
+    <button type="button" id="azul">Azul</button>
+    <button type="button" id="verde">Verde</button>
+
+    <div id="cor" style="width: 150px; height: 150px; border: 1px solid #000; margin-top: 10px;"></div>
+
+    <script>
+        let cor = document.getElementById('cor')
+
+        //Vermelho
+        document.getElementById('vermelho').addEventListener('click', ()=>{
+            cor.style.backgroundColor = 'red'
+            document.getElementById('vermelho').style.backgroundColor = 'red'
+            document.getElementById('vermelho').style.color = '#fff'
+        })
+
+        //Azul
+        document.getElementById('azul').addEventListener('click', ()=>{
+            cor.style.backgroundColor = 'blue'
+            document.getElementById('azul').style.backgroundColor = 'blue'
+            document.getElementById('azul').style.color = '#fff'
+        })
+
+        //Verde
+        document.getElementById('verde').addEventListener('click', ()=>{
+            cor.style.backgroundColor = 'green'
+            document.getElementById('verde').style.backgroundColor = 'green'
+            document.getElementById('verde').style.color = '#fff'
+        })
+    </script>
+</body>
+</html>
