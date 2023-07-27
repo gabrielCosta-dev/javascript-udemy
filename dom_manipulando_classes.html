@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM - Manipulando classes</title>
+    <style>
+        .a{
+            background-color: #413636; margin: 10px auto; border: 1px solid #fff;
+            width: 100px; height: 100px
+        }
+
+        .b{
+            background-color: #d45050; margin: 10px auto; border: 1px solid #000;
+            width: 100px; height: 100px
+        }
+    </style>
+</head>
+<body>
+    <div id="classe" class="a"></div>
+    <hr>
+    <button type="button" id="modificar">Modificar classe</button>
+
+    <script>
+        let classe = document.getElementById('classe')
+
+        document.getElementById('modificar').addEventListener('click',()=>{
+            classe.className = 'b'
+        })
+    </script>
+</body>
+</html>
