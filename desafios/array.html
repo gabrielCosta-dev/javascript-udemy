@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio - Array</title>
+</head>
+<body>
+    <input type="text" name="" id="objeto">
+    <button type="button" id="adicionar">Adicionar</button>
+    <button type="button" id="ordenar">Ordenar</button>
+
+    <script>
+        let objetos = ['cadeira', 'impressora', 'garfo']
+        
+        document.getElementById('adicionar').addEventListener('click', ()=>{
+            let obj = document.querySelector('input#objeto').value
+            
+            if (obj !== '') {
+                if (objetos.indexOf(obj) !== -1) {
+                    alert('Objeto já incluso!')
+                } else {
+                    objetos.push(obj.toLowerCase())
+                    console.log(objetos)
+
+                    //Limpar campo
+                    document.querySelector('input#objeto').value = ''
+                }
+            } else {
+                alert('Informe um valor válido!')
+            }
+        })
+
+        document.getElementById('ordenar').addEventListener('click', ()=>{
+            objetos.sort()
+            console.log(objetos)
+        })
+    </script>
+</body>
+</html>
