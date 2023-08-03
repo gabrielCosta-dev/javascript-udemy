@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Repetições - ForEach</title>
+</head>
+<body>
+    <script>
+        let listaConvidados = ['Ana', 'Meredith', 'Irwel', 'Raul', 'Zent']
+        console.log(listaConvidados);
+
+        let a = function(valor, indice, array){
+            console.log(`Índice: ${indice}, Valor: ${valor}`)
+        }
+
+        listaConvidados.forEach(a);
+
+        /* listaConvidados.forEach((valor) => {
+            console.log(`Valor: ${valor}.`)
+
+            if (valor == 'Ana') {
+                listaConvidados[indice] = 'Demoness'
+            } 
+        })
+        */
+        //console.log(listaConvidados);
+        
+    </script>
+</body>
+</html>
