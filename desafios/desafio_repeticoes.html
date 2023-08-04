@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio - Repetições</title>
+</head>
+<body>
+    <script>
+        let lista_frutas = ['Banana', 'Maçã', 'Morango', 'Uva']
+
+        /* for (let y = 0; y < lista_frutas.length; y++) {
+            document.write(lista_frutas[y]+'<br>')
+            
+        } */
+        let w = 0
+        while (w < lista_frutas.length) {
+            document.write(lista_frutas[w]+'<br>')
+            w++
+        }
+
+        document.write('<hr>')
+
+        let y = 1
+
+        while (y <= 10) {
+            let x = 1
+
+            while (x <= 10) {
+                document.write(`${y} x ${x} = ${y*x}<br>`)
+                x++
+            }
+
+            y++
+            document.write('<hr>')
+        }
+    </script>
+</body>
+</html>
