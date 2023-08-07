@@ -23,14 +23,26 @@
 
         document.write('A área do terreno é de ' +area+ ' metros quadrados.') */
 
-        function soma(a, b) {
+        /* function soma(a, b) {
             b = b === undefined ? 0 : b
             return a + b
         }
 
         console.log(soma(4, 5))
         console.log(soma(4, 5, 2, 21))//DESCONSIDERA PARAMETROS EXTRAS
-        console.log(soma(4))
+        console.log(soma(4)) */
+
+        function soma() {
+            let resultado = 0
+            for(let i in arguments){
+                console.log(arguments[i])
+                resultado += arguments[i]
+            }
+
+            return resultado
+        }
+
+        document.write(soma(7, 9, 4.3, 0.7))
     </script>
 </head>
 <body>
