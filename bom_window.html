@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOM - Window</title>
+</head>
+<body>
+    <button>Abrir janela</button>
+    <button>Fechar janela</button>
+    <button onclick="window.print()">Imprimir página</button>
+
+    <script>
+        let janela
+
+        document.getElementsByTagName('button')[0].addEventListener('click', ()=>{
+           janela = window.open('https://google.com.br', '_blank', 'height=300, width= 300')
+        })
+
+        document.getElementsByTagName('button')[1].addEventListener('click', ()=>{
+            window.close(janela)
+        })
+    </script>
+</body>
+</html>
