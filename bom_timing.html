@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOM - Timing</title>
+</head>
+<body>
+    <script>
+        let timeOut = setTimeout(() => {
+            document.write('Teste')
+            clearTimeout(timeOut)
+        }, 1000);
+
+        let i = 5
+        let intervalo = setInterval(() => {
+            document.write(`${i--} <br>`)
+
+            if (i == 0) {
+                //window.location.reload()
+                clearInterval(intervalo)
+            }
+        }, 1000);
+    </script>
+</body>
+</html>
