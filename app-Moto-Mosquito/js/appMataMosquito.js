@@ -22,8 +22,24 @@ posiçãoY = posiçãoY < 0 ? 0 : posiçãoY
 //Criar Imagem do Mosquito
 let img_mosquito = document.createElement('img')
 img_mosquito.setAttribute('src', 'imagens/mosquito.png')
-img_mosquito.setAttribute('class', 'mosquito1')
+img_mosquito.setAttribute('class', tamanhoAleatorio())
 img_mosquito.style.left = posiçãoX + 'px'
 img_mosquito.style.top = posiçãoY + 'px'
 img_mosquito.style.position = 'absolute'
 document.body.appendChild(img_mosquito)
+
+function tamanhoAleatorio() {
+    let classe = Math.floor(Math.random()*3)
+    
+    switch (classe) {
+        case 0:
+            return 'mosquito1'
+
+        case 1: 
+            return 'mosquito2'
+    
+        case 2:    
+            return 'mosquito3'
+    }
+}
+console.log(tamanhoAleatorio())
