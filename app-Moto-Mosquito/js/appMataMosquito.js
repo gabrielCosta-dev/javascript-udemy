@@ -1,6 +1,8 @@
-//Tela
+//Variáveis Globais
 let altura = 0
 let largura = 0
+let vidas = 1
+let tempo = 15
 
 function ajustaTamanhoPalcoJogo() {
     largura = window.innerWidth
@@ -19,6 +21,13 @@ function posicaoRandomica() {
     //Remover imagem mosquito anterior caso exista
     if (document.getElementById('mosquito')) {
         document.getElementById('mosquito').remove()
+
+        if (vidas > 3) {
+            //window.location.replace('fim_de_jogo.html')
+        } else {
+            document.getElementById('v' + vidas).src = 'imagens/coracao_vazio.png'
+            vidas++
+        }
     }
 
     //Aleatorizar Posição
@@ -35,6 +44,11 @@ function posicaoRandomica() {
     img_mosquito.style.left = posiçãoX + 'px'
     img_mosquito.style.top = posiçãoY + 'px'
     img_mosquito.style.position = 'absolute'
+
+    //Remoção por clique
+    img_mosquito.addEventListener('click', ()=>{
+        document.getElementById('mosquito').remove()
+    })
     
     document.body.appendChild(img_mosquito)
 }
@@ -68,6 +82,20 @@ function ladoAleatorio() {
 }
 
 //Adicionar e Remover Imagem Em Intervalo
-setInterval(() => {
+let criaMosquito = setInterval(() => {
     posicaoRandomica()
+}, 2000);
+
+//Cronometro
+let cronometro = setInterval(() => {
+    if (tempo < 0) {
+        clearInterval(cronometro)
+        clearInterval(criaMosquito)
+        window.location.replace('vitoria.html')
+    } else {
+        document.getElementById('cronometro').innerHTML = tempo--
+    }
 }, 1000);
+
+
+
