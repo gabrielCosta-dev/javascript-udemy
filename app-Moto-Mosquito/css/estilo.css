@@ -1,7 +1,27 @@
 @charset "UTF-8";
 
+/* Cenário */
+body{
+    background: url(/app-Moto-Mosquito/imagens/bg.jpg) no-repeat;
+    background-size: cover;
+}
+
+.painel{
+    position: absolute; width: 190px; padding: 10px; bottom: 0px; border-top: solid 1px #FFF;
+    background-color: #ffffff52; left: 0px;
+}
+
+.vidas{
+    float: left;
+}
+
+.cronometro{
+    float: left; font-size: 20px; font-weight: bold;
+}
+
+/* Tamanho Imagem Mosquito */
 .mosquito1{
-    width: 50px; height:50px
+    width: 50px; height:50px;
 }
 
 .mosquito2{
@@ -10,4 +30,13 @@
 
 .mosquito3{
     width: 100px; height: 100px;
+}
+
+/* Orientação Imagem Mosquito */
+.ladoA{
+    transform: scaleX(1);
+}
+
+.ladoB{
+    transform: scaleX(-1);
 }
