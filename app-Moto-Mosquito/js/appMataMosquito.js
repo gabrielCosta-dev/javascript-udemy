@@ -2,7 +2,8 @@
 let altura = 0
 let largura = 0
 let vidas = 1
-let tempo = 15
+let tempo = 60
+let criaMosquitoTempo = 1500
 
 function ajustaTamanhoPalcoJogo() {
     largura = window.innerWidth
@@ -23,7 +24,7 @@ function posicaoRandomica() {
         document.getElementById('mosquito').remove()
 
         if (vidas > 3) {
-            //window.location.replace('fim_de_jogo.html')
+            window.location.replace('fim_de_jogo.html')
         } else {
             document.getElementById('v' + vidas).src = 'imagens/coracao_vazio.png'
             vidas++
@@ -84,7 +85,19 @@ function ladoAleatorio() {
 //Adicionar e Remover Imagem Em Intervalo
 let criaMosquito = setInterval(() => {
     posicaoRandomica()
-}, 2000);
+}, criaMosquitoTempo);
+
+//Ajustar Dificuldade
+let nivel = window.location.search
+nivel = nivel.replace('?', '')
+
+if (nivel == 'normal') {
+   criaMosquitoTempo = 1500
+} else if(nivel == 'dificil'){
+    criaMosquitoTempo = 1000
+} else {
+    criaMosquitoTempo = 750
+}
 
 //Cronometro
 let cronometro = setInterval(() => {
