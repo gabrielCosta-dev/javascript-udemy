@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript - Orientação a Objetos</title>
+</head>
+<body>
+    <script>
+        //Modelo do Objeto
+        class ContaBancaria{
+
+            constructor(){
+                this.agencia = 0o12
+                this.numeroConta = 0o1227
+                this.saldo = 220.53
+                this.limite = 1000
+            }
+
+            depositar(valorDeposito){
+                this.saldo += valorDeposito
+            }
+
+            sacar(valorSaque){
+                this.saldo -= valorSaque
+            }
+
+            consultarSaldo(){
+                return this.saldo
+            }
+        }
+
+        let conta = new ContaBancaria()
+        let conta1 = new ContaBancaria()
+
+        conta.depositar(520)
+        document.write(conta.consultarSaldo())
+
+        document.write('<hr>')
+
+        conta.sacar(310)
+        document.write(conta.consultarSaldo())
+    </script>
+</body>
+</html>
