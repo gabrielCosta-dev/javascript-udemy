@@ -42,7 +42,7 @@
         document.write(conta.consultarSaldo()) */
 
         //
-        class Cadeira{
+        /* class Cadeira{
             constructor(qtdePernas, giratória, cor){
                 this.qtdePernas = qtdePernas
                 this.giratória = giratória
@@ -62,8 +62,27 @@
 
         cadeiras.push(new Cadeira(4, false, 'preto'))
         cadeiras.push(new Cadeira(1, true, 'branca'))
-        console.log(cadeiras)
+        console.log(cadeiras) */
         
+
+        class Sofá{
+            constructor(cor, qtdeAssentos, reclinável){
+                this.cor = cor
+                this.qtdeAssentos = qtdeAssentos
+                this.reclinável = reclinável
+            }
+
+            reclinar(){
+                if (this.reclinável === true) {
+                    return 'Sofá foi reclinado.'
+                } else {
+                    return 'Não é possível reclinar.'
+                }
+            }
+        }
+
+        let sofá = new Sofá('verde', 3, false)
+        document.write(sofá.reclinar())
     </script>
 </body>
 </html>
