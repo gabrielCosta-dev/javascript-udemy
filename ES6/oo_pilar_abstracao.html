@@ -33,13 +33,39 @@
         let conta = new ContaBancaria()
         let conta1 = new ContaBancaria()
 
-        conta.depositar(520)
+        /* conta.depositar(520)
         document.write(conta.consultarSaldo())
 
         document.write('<hr>')
 
         conta.sacar(310)
-        document.write(conta.consultarSaldo())
+        document.write(conta.consultarSaldo()) */
+
+        //
+        class Cadeira{
+            constructor(qtdePernas, giratória, cor){
+                this.qtdePernas = qtdePernas
+                this.giratória = giratória
+                this.cor = cor
+            }
+
+            girarCadeira(){
+                if (this.giratória === true) {
+                    return 'Cadeira giratória.'
+                } else {
+                    return 'Cadeira não é giratória.'
+                }
+            }
+        }
+
+        let cadeira = new Cadeira(4, false, 'preto')
+        let cadeira1 = new Cadeira(1, true, 'branca')
+        document.write(cadeira.girarCadeira())
+        document.write('<hr>')
+        document.write(cadeira1.girarCadeira())
+
+        console.log(cadeira); console.log(cadeira1);
+        
     </script>
 </body>
 </html>
