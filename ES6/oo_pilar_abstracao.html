@@ -58,13 +58,11 @@
             }
         }
 
-        let cadeira = new Cadeira(4, false, 'preto')
-        let cadeira1 = new Cadeira(1, true, 'branca')
-        document.write(cadeira.girarCadeira())
-        document.write('<hr>')
-        document.write(cadeira1.girarCadeira())
+        let cadeiras = []
 
-        console.log(cadeira); console.log(cadeira1);
+        cadeiras.push(new Cadeira(4, false, 'preto'))
+        cadeiras.push(new Cadeira(1, true, 'branca'))
+        console.log(cadeiras)
         
     </script>
 </body>
