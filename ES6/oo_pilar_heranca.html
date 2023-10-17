@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript - Orientação a Objetos</title>
+</head>
+<body>
+    <script>
+        class Animais{
+            constructor(){
+                this.comer = ['Herbívoro', 'Carnívoro', 'Onívoro']
+            }
+
+            existir(){
+                console.log('Existir.');
+            }
+        }
+
+        class Aves extends Animais{
+            constructor(){
+                super()
+                this.cobertura = 'Plumagem'
+            }
+
+            voar(){
+                console.log('Voar');
+            }
+        }
+
+        class Papagaio extends Aves{
+            constructor(){
+                super()
+                this.cor = 'Verde'
+            }
+        }
+
+        let animais = new Animais
+        let aves = new Aves
+        let papagaio = new Papagaio
+        console.log(animais); console.log(aves); console.log(papagaio);
+
+
+        papagaio.existir()
+    </script>
+</body>
+</html>
