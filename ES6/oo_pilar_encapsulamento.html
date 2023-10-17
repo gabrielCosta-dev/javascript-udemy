@@ -7,7 +7,28 @@
 </head>
 <body>
     <script>
-        
+        class TV{
+            constructor(){
+                this._relaçãoCanais = [2, 4, 5, 6, 10]
+                this._canalAtivo = 2
+                this._volume = 21
+            }
+
+            get canalAtivo(){
+                return this._canalAtivo
+            }
+
+            set mudarCanal(canal){
+                if (this._relaçãoCanais.indexOf(canal) !== -1) {
+                    this._canalAtivo = canal
+                }
+            }
+        }
+
+        let tv = new TV()
+        console.log(tv.canalAtivo)
+        tv.mudarCanal = 7
+        console.log(tv);
     </script>
 </body>
 </html>
