@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript - Orientação a Objetos</title>
+</head>
+<body>
+    
+    <script>
+        class Produto{
+            constructor(descrição, preço){
+                this.descrição = descrição
+                this.preço = preço
+            }
+
+            verDescrição(){
+                console.log(`${this.descrição} por R$${this.preço}, 00.`);
+            }
+        }
+
+        let produto = new Produto('Smartphone', 2100)
+        produto.verDescrição()
+
+        let produtoLiteral = {
+            descrição: 'Notebook',
+            preço: 2500,
+            verDescrição: function () {
+                console.log(`${this.descrição} por R$${this.preço}, 00.`);
+            }
+        }
+
+        produtoLiteral.verDescrição()
+    </script>
+</body>
+</html>
