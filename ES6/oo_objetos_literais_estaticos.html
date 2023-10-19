@@ -8,20 +8,6 @@
 <body>
     
     <script>
-        class Produto{
-            constructor(descrição, preço){
-                this.descrição = descrição
-                this.preço = preço
-            }
-
-            verDescrição(){
-                console.log(`${this.descrição} por R$${this.preço}, 00.`);
-            }
-        }
-
-        let produto = new Produto('Smartphone', 2100)
-        produto.verDescrição()
-
         let produtoLiteral = {
             descrição: 'Notebook',
             preço: 2500,
@@ -30,7 +16,30 @@
             }
         }
 
-        produtoLiteral.verDescrição()
+        //Melhorias de notação
+        let nome = 'Gabriel'
+        let idade = 26
+        let sexo = 'masculino'
+        let profissão = 'programador'
+
+        let obj = {
+            nome: nome, idade: idade, sexo: sexo, profissão: profissão,
+            exibirResumo: function(){
+                console.log(`${this.nome}, ${this.idade} anos, ${this.sexo} é ${this.profissão}.`);
+            }
+        }
+        console.log(obj);
+        
+        //
+
+        let obj2 = {
+            nome, idade, sexo, profissão,
+            exibirResumo(){
+                console.log(`${this.nome}, ${this.idade} anos, ${this.sexo} é ${this.profissão}.`);
+            }
+        }
+        console.log(obj2);
+        obj2.exibirResumo()
     </script>
 </body>
 </html>
