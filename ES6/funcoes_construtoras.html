@@ -9,10 +9,36 @@
     
     <script>
         let Carro = function(){
-            this.cor
+            //Atributos
+            this.cor = 'Amarelo'
+            this.modelo = 'Chevette'
+            this.velocidadeAtual = 0
+            this.velocidadeMáxima = 180
+
+            //Métodos
+            this.acelerar = function (aceleração) {
+                //return this.velocidadeAtual + aceleração
+                let acelerar = this.getVelocidadeAtual() + aceleração
+                this.setVelocidadeAtual(acelerar)
+            }
+
+            this.getVelocidadeAtual = function(){
+                return this.velocidadeAtual
+            }
+
+            this.setVelocidadeAtual = function(velAtual){
+                this.velocidadeAtual = velAtual
+            }
         }
 
         let carro = new Carro()
+        document.write(`A velocidade atual é ${carro.getVelocidadeAtual()}.`)
+        carro.acelerar(12)
+        document.write('<br>')
+        document.write(`A velocidade atual é ${carro.getVelocidadeAtual()}.`)
+        carro.acelerar(17)
+        document.write('<br>')
+        document.write(`A velocidade atual é ${carro.getVelocidadeAtual()}.`)
     </script>
 </body>
 </html>
