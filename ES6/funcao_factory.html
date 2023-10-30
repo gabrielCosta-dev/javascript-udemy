@@ -17,6 +17,21 @@
 
         console.log(Bicicleta1);
 
+        let BicicletaFactory = function (cor, marcha, aro) {
+            //Lógica
+            //Requisição HTTP
+            //Resposta HTTP
+            return {
+                cor, marcha, aro,
+                pedalar(){
+                    console.log(`Método Pedalar executado`);
+                }
+            }
+        }
+
+        let Bicicleta3 = BicicletaFactory('Preta', '12', 18)
+        console.log(Bicicleta3);
+        console.log(Bicicleta3.cor); console.log(Bicicleta3.pedalar());
     </script>
 </body>
 </html>
