@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prototype</title>
+</head>
+<body>
+    
+    <script>
+        let a1 = {
+            cor: 'Branco', modelo: 'Airbus a380',
+            levantarVoo(){
+                return console.log(`Método levantar voo executado.`);
+            }
+        }
+        console.log(a1);
+
+        let AviãoF = function () {
+            this.cor = 'Azul'
+            this.modelo = 'Boeing 787'
+
+            this.levantarVoo = voo => console.log(`Método levantar voo executado.`)
+        }
+        let a2 = new AviãoF
+        console.log(a2);
+
+        class AviãoC{
+            constructor(){
+                this.cor = 'Vermelho'
+                this.modelo = 'Embraer E-Jets'
+            }
+
+            levantarVoo(){
+                return console.log(`Método levantar voo executado.`);
+            }
+        }
+
+        let a3 = new AviãoC
+        console.log(a3);
+
+        function soma(a, b) {
+            return a+b
+        }
+        soma(); console.log(soma);
+    </script>
+</body>
+</html>
