@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operador Rest/Spread</title>
+</head>
+<body>
+    
+    <script>
+        //Contexto REST
+        function soma(...param) {
+            let resultado = 0
+            
+            param.forEach(v => resultado += v)
+
+            return resultado
+        }
+        //console.log(soma(8, 7, 10, 27));
+
+        function multiplicação(m, ...p) {
+            let res = 0
+            p.forEach(v => res += m * v)
+            return res
+        }
+
+        console.log(multiplicação(5, 7, 12, 3, 49))
+        
+    </script>
+</body>
+</html>
