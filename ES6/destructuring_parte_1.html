@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destructuring</title>
+</head>
+<body>
+    
+    <script>
+        //Arrays
+        let frutas = ['Abacaxi', 'Uva', 'Pêra', 'Mamão']
+
+        //let [a, b, , c] = frutas
+        let [a, b='Banana', c, d, e='Melancia'] = frutas
+
+        console.log(a, b, c, d, e);
+
+        let coisas = [['Pêssego', 'Tomate', 'Limão', 'Goiaba'], ['Carlos', 'Anita']]
+        let [[, , f3],[, n2]] = coisas
+        console.log(f3,n2);
+    </script>
+</body>
+</html>
