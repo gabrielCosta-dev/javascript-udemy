@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destructuring</title>
+</head>
+<body>
+    
+    <script>
+        //Array
+        /* let arr = Array(10, 20, 30, 40)
+        function teste([ , a, , b, c = 50] = arr) {
+            return console.log(a, b, c);
+        }
+        teste(arr) */
+
+        //Objeto
+        let obj = {a: 10, b: 20, c: 30, d: 40}
+
+        function teste({a, b: x, c, e = 60} = obj) {
+            console.log(a, x, c, e);
+        }
+        teste(obj)
+    </script>
+</body>
+</html>
